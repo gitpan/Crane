@@ -3,7 +3,7 @@
 
 =head1 NAME
 
-C<Crane::Base> - Minimal base class for Crane projects.
+Crane::Base - Minimal base class for Crane projects.
 
 =cut
 
@@ -24,7 +24,7 @@ use IO::Handle ();
 use Readonly;
 
 
-our $VERSION = '1.00.0001';
+our $VERSION = '1.00.0002';
 
 our @EXPORT = (
     @Carp::EXPORT,
@@ -120,7 +120,7 @@ Import this package is equivalent to:
 
 =over
 
-=item C<BASE_PATH>
+=item BASE_PATH
 
 Used to determine the base directory for the application environment.
 
@@ -129,7 +129,7 @@ Used to determine the base directory for the application environment.
 
 =head1 AUTHOR
 
-Tema Novikov, C<< <novikov.tema@gmail.com> >>
+Tema Novikov, <novikov.tema@gmail.com>
 
 
 =head1 COPYRIGHT AND LICENSE

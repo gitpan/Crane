@@ -3,7 +3,7 @@
 
 =head1 NAME
 
-C<Crane::Options> - Command line options and arguments parser.
+Crane::Options - Command line options and arguments parser.
 
 =cut
 
@@ -16,7 +16,7 @@ use File::Basename qw( basename );
 use Getopt::Long qw( GetOptionsFromArray :config posix_default  );
 
 
-our $VERSION = '1.00.0001';
+our $VERSION = '1.00.0002';
 
 our @EXPORT = qw(
     &options
@@ -46,20 +46,21 @@ Readonly::Scalar(our $OPT_HELP      => [ 'help|?!',  'Shows this help and exits.
 =head1 DESCRIPTION
 
 Parses command line options and arguments. Options are available as hash
-reference returned by C<options> function and arguments are available as array
-reference returned by C<args> function.
+reference returned by L</options> function and arguments are available as array
+reference returned by L</args> function.
 
 You can configure options by passing list of array references when first call
-C<options> function (see description below).
+L</options> function (see description below).
 
 By default two options are available: B<version> and B<help> (B<?> as short
 alias).
 
-=head2 Exported specifications
+
+=head1 CONSTANTS
 
 =over
 
-=item C<$OPT_SEPARATOR>
+=item $OPT_SEPARATOR
 
 Not an option exaclty, just a separator in help output.
 
@@ -67,7 +68,7 @@ Equals to:
 
   []
 
-=item C<$OPT_VERSION>
+=item $OPT_VERSION
 
 Version information output.
 
@@ -75,7 +76,7 @@ Equals to:
 
   [ 'version!', 'Shows version information and exists.' ]
 
-=item C<$OPT_HELP>
+=item $OPT_HELP
 
 Help output.
 
@@ -90,35 +91,35 @@ Equals to:
 
 =over
 
-=item C<options> (C<@options>)
+=item options LIST
 
 Returns hash reference to command line options.
 
-Can be configured when first call with C<@options> list. For create an option
+Can be configured when first call with list of options. For create an option
 you should pass a list of array references with one required and two optional
 items:
 
 =over
 
-=item B<Specification> (required)
+=item Specification (required)
 
 Scalar. Specification from L<Getopt::Long> module.
 
-=item B<Description> (optional)
+=item Description (optional)
 
 Scalar. Text description - what is this option does?
 
-=item B<Parameters> (optional)
+=item Parameters (optional)
 
 Hash reference. Additional parameters:
 
 =over
 
-=item B<default>
+=item default
 
 Default value for option if option does not exist.
 
-=item B<required>
+=item required
 
 Flag that option should be exists.
 
@@ -215,7 +216,7 @@ sub options {
 }
 
 
-=item C<args> ()
+=item args
 
 Returns array reference to command line arguments.
 
@@ -236,7 +237,7 @@ sub args {
 
 =item Invalid option specification: %s
 
-Where I<%s> is specification string.
+Where C<%s> is specification string.
 
 Fires when required parameter of specification is not defined or incorrect.
 
@@ -249,7 +250,7 @@ Fires when required parameter of specification is not defined or incorrect.
 
 =item Option required: %s
 
-Where I<%s> is an option name.
+Where C<%s> is an option name.
 
 Option does not exist but required.
 
@@ -305,7 +306,7 @@ Help output:
 
 =head1 AUTHOR
 
-Tema Novikov, C<< <novikov.tema@gmail.com> >>
+Tema Novikov, <novikov.tema@gmail.com>
 
 
 =head1 COPYRIGHT AND LICENSE

@@ -3,7 +3,7 @@
 
 =head1 NAME
 
-C<Crane> - Micro framework/helpers for scripts.
+Crane - Micro framework/helpers for scripts.
 
 =cut
 
@@ -17,7 +17,7 @@ use File::Basename qw( basename );
 use File::Spec::Functions qw( catdir );
 
 
-our $VERSION = '1.00.0001';
+our $VERSION = '1.00.0002';
 
 
 sub import {
@@ -92,13 +92,10 @@ sub import {
 
 =head1 SYNOPSIS
 
-=head2 Singleton usage
-
   use Crane;
-
-
-=head2 Daemon usage
-
+  
+  ...
+  
   use Crane ( 'name' => 'example' );
 
 
@@ -156,7 +153,7 @@ In case of running I<as daemon> will return 1 if process is already running.
 
 =item Process is already running: %d
 
-Where I<%d> is a PID.
+Where C<%d> is a PID.
 
 You tried to run application I<as daemon> while another copy is running.
 
@@ -165,12 +162,29 @@ You tried to run application I<as daemon> while another copy is running.
 
 =head1 EXAMPLES
 
-  TODO: ...
+=head2 Singleton usage
+
+  use Crane;
+
+
+=head2 Daemon usage
+
+  use Crane ( 'name' => 'example' );
+
+
+=head2 Configure options
+
+  use Crane (
+      [ 'from|F=s', 'Start of the interval.', { 'required' => 1 } ],
+      [ 'to|F=s',   'End of the interval.',   { 'required' => 1 } ],
+  );
+
+As a result we have these two options, a separator and default options.
 
 
 =head1 ENVIRONMENT
 
-Please, look at L<Crane::Base/Crane::Base> environment description.
+Please, look at L<Crane::Base environment|Crane::Base#EXAMPLES> description.
 
 
 =head1 FILES
@@ -194,7 +208,7 @@ Script's PID files.
 
 =head1 AUTHOR
 
-Tema Novikov, C<< <novikov.tema@gmail.com> >>
+Tema Novikov, <novikov.tema@gmail.com>
 
 
 =head1 COPYRIGHT AND LICENSE

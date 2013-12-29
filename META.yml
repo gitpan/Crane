@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Crane
-version:            1.00.0001
+version:            1.00.0002
 abstract:           ~
 author:
     - Tema Novikov <novikov.tema@gmail.com>
