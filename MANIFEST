@@ -1,4 +1,5 @@
 MANIFEST
+LICENSE
 Makefile.PL
 lib/Crane.pm
 lib/Crane/Base.pm

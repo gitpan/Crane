@@ -16,7 +16,7 @@ use File::Basename qw( basename );
 use Getopt::Long qw( GetOptionsFromArray :config posix_default  );
 
 
-our $VERSION = '1.00.0002';
+our $VERSION = '1.00.0003';
 
 our @EXPORT = qw(
     &options
@@ -91,7 +91,7 @@ Equals to:
 
 =over
 
-=item options LIST
+=item options [ LIST ]
 
 Returns hash reference to command line options.
 
@@ -311,10 +311,11 @@ Tema Novikov, <novikov.tema@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2013-2014 Tema Novikov.
+Copyright (C) 2013-2014 Tema Novikov.
 
-This library is free software; you may redistribute it and/or modify
-it under the same terms as Perl itself.
+This library is free software; you can redistribute it and/or modify it under
+the terms of the Artistic License 2.0. For details, see the full text of the
+license in the file LICENSE.
 
 =cut
 

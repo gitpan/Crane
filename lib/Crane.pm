@@ -17,7 +17,7 @@ use File::Basename qw( basename );
 use File::Spec::Functions qw( catdir );
 
 
-our $VERSION = '1.00.0002';
+our $VERSION = '1.00.0003';
 
 
 sub import {
@@ -174,17 +174,17 @@ You tried to run application I<as daemon> while another copy is running.
 
 =head2 Configure options
 
-  use Crane (
+  use Crane ( 'options' => [
       [ 'from|F=s', 'Start of the interval.', { 'required' => 1 } ],
       [ 'to|F=s',   'End of the interval.',   { 'required' => 1 } ],
-  );
+  ] );
 
 As a result we have these two options, a separator and default options.
 
 
 =head1 ENVIRONMENT
 
-Please, look at L<Crane::Base environment|Crane::Base#EXAMPLES> description.
+Please, look at L<Crane::Base environment|Crane::Base#> description.
 
 
 =head1 FILES
@@ -213,10 +213,11 @@ Tema Novikov, <novikov.tema@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2013-2014 Tema Novikov.
+Copyright (C) 2013-2014 Tema Novikov.
 
-This library is free software; you may redistribute it and/or modify
-it under the same terms as Perl itself.
+This library is free software; you can redistribute it and/or modify it under
+the terms of the Artistic License 2.0. For details, see the full text of the
+license in the file LICENSE.
 
 =cut
 

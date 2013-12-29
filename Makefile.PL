@@ -21,9 +21,10 @@ WriteMakefile(
         'Carp'                  => 0,
         'Cwd'                   => 0,
         'English'               => 0,
-        'IO::Handle'            => 0,
-        'Readonly'              => 0,
         'File::Basename'        => 0,
         'File::Spec::Functions' => 0,
+        'IO::Handle'            => 0,
+        'Readonly'              => 0,
+        'Test::More::UTF8'      => 0,
     },
 );
