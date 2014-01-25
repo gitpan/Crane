@@ -35,4 +35,4 @@ requires:
   YAML: 0
   YAML::Dumper: 0
   perl: 5.014_002
-version: v1.02.0008
+version: v1.02.0010

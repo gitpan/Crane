@@ -34,12 +34,12 @@ sub import {
     
     my ( $class, @isa ) = @_;
     
+    my $caller = caller;
+    
     strict->import();
     warnings->import();
     utf8->import();
     feature->import(':5.14');
-    
-    my $caller = caller;
     
     # ISA
     if ( scalar @isa ) {
